@@ -10,14 +10,23 @@ get_header();
      <div class="row">
          <div class="dashtitle">
              <h1>Welcome, <?php the_field('client_name') ?></h1>
-             <h2>some filler here.</h2>
          </div>
      </div>
 
      <div class="row">
+         <!-- start the Loop -->
+         <?php while( have_posts() ) : the_post(); ?>
+
          <div class="col-sm">
+             <div class="card">
+                 <h3>Site Content</h3>
+
+             </div>
 
          </div>
+
+      <!-- end the Loop -->
+     <?php endwhile; ?>
 
      </div>
 
