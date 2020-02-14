@@ -8,6 +8,13 @@ get_header();
 
  <div class="container">
      <div class="row">
+         <div class="dashtitle">
+             <h1>Welcome, Client.</h1>
+
+         </div>
+
+     </div>
+     <div class="row">
          <div class="col-sm">
 
          </div>
