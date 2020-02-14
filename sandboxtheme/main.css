@@ -1,5 +1,7 @@
 body{width:100%;overflow-x: hidden;}
 
+.navarea{padding:20px 0;background-color:#c9c9c9;}
+
 nav{justify-content: space-around;}
 
 h1{text-align:center;}
