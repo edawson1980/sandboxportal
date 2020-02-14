@@ -63,5 +63,22 @@ function make_cpt(){
             )
         )
     );
+
+    register_post_type('timeline',
+        //options
+        array(
+            'labels' => array(
+                'name' => __( 'Timelines' ),
+                'singular_name' => __( 'Timeline' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-calendar-alt',
+            'supports' => array(
+                'title',
+                'custom-fields'
+            )
+        )
+    );
 }
 add_action( 'init', 'make_cpt' );
