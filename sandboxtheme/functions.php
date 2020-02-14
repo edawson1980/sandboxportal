@@ -80,5 +80,25 @@ function make_cpt(){
             )
         )
     );
+
+    register_post_type('development',
+        //options
+        array(
+            'labels' => array(
+                'name' => __( 'Development' ),
+                'singular_name' => __( 'Development' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-admin-site-alt3',
+            'supports' => array(
+                'title',
+                'custom-fields'
+            )
+        )
+    );
+
+
+
 }
 add_action( 'init', 'make_cpt' );
