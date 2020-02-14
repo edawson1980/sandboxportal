@@ -3,3 +3,5 @@ body{width:100%;overflow-x: hidden;}
 nav{justify-content: space-around;}
 
 p{color:red;}
+
+footer{position:absolute;bottom:0;}
