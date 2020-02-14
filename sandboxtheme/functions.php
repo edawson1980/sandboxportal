@@ -7,3 +7,26 @@ function add_my_styles(){
 }
 
 add_action('wp_enqueue_scripts', 'add_my_styles');
+
+
+//add custom post types
+
+function make_cpt(){
+
+    register_post_type('clients',
+        //options
+        array(
+            'labels' => array(
+                'name' => __( 'Clients' ),
+                'singular_name' => __( 'Client' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-businessman',
+            'supports' => array(
+                'title',
+                'custom-fields'
+            )
+        )
+    );
+}
