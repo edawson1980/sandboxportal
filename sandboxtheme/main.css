@@ -2,7 +2,7 @@ body{width:100%;overflow-x: hidden;}
 
 nav{justify-content: space-around;}
 
-p{color:red;}
+h1{text-align:center;}
 
 footer{
     position:absolute;
