@@ -4,7 +4,8 @@ body{width:100%;overflow-x: hidden;}
 
 nav{justify-content: space-around;}
 
-h1{text-align:center;}
+h1,h3{text-align:center;}
+
 
 footer{
     position:absolute;
