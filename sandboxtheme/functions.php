@@ -30,3 +30,4 @@ function make_cpt(){
         )
     );
 }
+add_action( 'init', 'make_cpt' );
