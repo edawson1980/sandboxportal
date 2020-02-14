@@ -20,6 +20,9 @@ get_header();
          <div class="col-sm">
              <div class="card">
                  <h3>Site Content</h3>
+                 <button type="button" class="btn btn-sm btn-info">
+                     <?php the_field('site_content'); ?>
+                 </button>
              </div>
 
          </div>
