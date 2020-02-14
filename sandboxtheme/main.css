@@ -1,1 +1,5 @@
+body{width:100%;display:flex;overflow-x: hidden;}
+
+.nav{justify-content: space-around;}
+
 p{color:red;}
