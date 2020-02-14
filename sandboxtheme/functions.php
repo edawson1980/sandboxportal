@@ -29,5 +29,22 @@ function make_cpt(){
             )
         )
     );
+
+    register_post_type('sitecontent',
+        //options
+        array(
+            'labels' => array(
+                'name' => __( 'Site Content' ),
+                'singular_name' => __( 'Site Content' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-media-document',
+            'supports' => array(
+                'title',
+                'custom-fields'
+            )
+        )
+    );
 }
 add_action( 'init', 'make_cpt' );
