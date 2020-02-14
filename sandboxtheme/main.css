@@ -4,4 +4,9 @@ nav{justify-content: space-around;}
 
 p{color:red;}
 
-footer{position:absolute;bottom:0;}
+footer{
+    position:absolute;
+    bottom:0;
+    background-color: #c9c9c9;
+    width:100%;
+}
