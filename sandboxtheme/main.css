@@ -6,7 +6,11 @@ nav{justify-content: space-around;}
 
 h1{text-align:center;}
 
-.card{text-align:center;}
+.card{
+    text-align:center;
+    padding:10px;
+    border:2px solid #fcae00;
+}
 
 
 footer{
