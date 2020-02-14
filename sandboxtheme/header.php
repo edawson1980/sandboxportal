@@ -11,7 +11,7 @@
   <body>
       <div class="navarea">
           <div class="container">
-              <nav>
+              <nav class="d-flex">
                   <a class="menu-item" href="#">Home</a>
                   <a class="menu-item" href="#">Page One</a>
                   <a class="menu-item" href="#">Page Two</a>
