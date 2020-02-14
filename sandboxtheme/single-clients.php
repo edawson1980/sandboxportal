@@ -20,7 +20,24 @@ get_header();
          <div class="col-sm">
              <div class="card">
                  <h3>Site Content</h3>
+             </div>
 
+         </div>
+         <div class="col-sm">
+             <div class="card">
+                 <h3>Site Design</h3>
+             </div>
+
+         </div>
+         <div class="col-sm">
+             <div class="card">
+                 <h3>Timeline</h3>
+             </div>
+
+         </div>
+         <div class="col-sm">
+             <div class="card">
+                 <h3>Web Development</h3>
              </div>
 
          </div>
