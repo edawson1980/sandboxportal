@@ -46,5 +46,22 @@ function make_cpt(){
             )
         )
     );
+
+    register_post_type('sitedesign',
+        //options
+        array(
+            'labels' => array(
+                'name' => __( 'Site Design' ),
+                'singular_name' => __( 'Site Design' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-image-crop',
+            'supports' => array(
+                'title',
+                'custom-fields'
+            )
+        )
+    );
 }
 add_action( 'init', 'make_cpt' );
