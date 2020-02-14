@@ -21,7 +21,7 @@ get_header();
              <div class="card">
                  <h3>Site Content</h3>
                  <button type="button" class="btn btn-sm btn-info">
-                     <?php the_field('site_content'); ?>
+                     <a class="cardlinks" href="<?php the_field('site_content'); ?>">Click Through.</a>
                  </button>
              </div>
 
