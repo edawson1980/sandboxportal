@@ -9,7 +9,7 @@ get_header();
  <div class="container">
      <div class="row">
          <div class="dashtitle">
-             <h1>Welcome, <?php the_field('client_name') ?></h1>
+             <h1><?php the_field('client_name') ?> Site Content</h1>
          </div>
      </div>
 
