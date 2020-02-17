@@ -3,6 +3,7 @@
 Template Name: Single Client Template
 Description: Layout for individual Clients dashboard
 */
+acf_form_head();
 get_header();
  ?>
 
@@ -13,51 +14,25 @@ get_header();
          </div>
      </div>
 
-     <div class="row">
-         <!-- start the Loop -->
-         <?php while( have_posts() ) : the_post(); ?>
+     <div class="container-fluid">
+         <div class="row">
+             <!-- start the Loop -->
+             <?php while( have_posts() ) : the_post(); ?>
 
-         <div class="col-sm">
-             <div class="card">
-                 <h3>Site Content</h3>
-                 <button type="button" class="btn btn-sm btn-info">
-                     <a class="cardlinks" href="<?php the_field('site_content'); ?>">Click Through.</a>
-                 </button>
+             <div class="col-md-12">
+                 <div class="card">
+                     <h3>Feedback Form</h3>
+                     <?php acf_form(); ?>
+                 </div>
+
              </div>
 
-         </div>
-         <div class="col-sm">
-             <div class="card">
-                 <h3>Site Design</h3>
-                 <button type="button" class="btn btn-sm btn-info">
-                     <a class="cardlinks" href="<?php the_field('site_design'); ?>">Click Through.</a>
-                 </button>
-             </div>
+          <!-- end the Loop -->
+         <?php endwhile; ?>
 
          </div>
-         <div class="col-sm">
-             <div class="card">
-                 <h3>Timeline</h3>
-                 <button type="button" class="btn btn-sm btn-info">
-                     <a class="cardlinks" href="<?php the_field('timeline'); ?>">Click Through.</a>
-                 </button>
-             </div>
-
-         </div>
-         <div class="col-sm">
-             <div class="card">
-                 <h3>Web Development</h3>
-                 <button type="button" class="btn btn-sm btn-info">
-                     <a class="cardlinks" href="<?php the_field('web_development'); ?>">Click Through.</a>
-                 </button>
-             </div>
-
-         </div>
-
-      <!-- end the Loop -->
-     <?php endwhile; ?>
-
      </div>
+
 
  </div>
 
