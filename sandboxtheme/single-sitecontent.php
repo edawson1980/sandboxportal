@@ -22,7 +22,14 @@ get_header();
              <div class="col-md-12">
                  <div class="card">
                      <h3>Feedback Form</h3>
-                     <?php acf_form(); ?>
+                     <?php acf_form(array(
+                         'fields' => array(
+                         'sc_revisions',
+                         'sc_client_comments'
+                     ),
+                     'submit_value' => 'Submit feedback'
+                     )
+                    ); ?>
                  </div>
 
              </div>
