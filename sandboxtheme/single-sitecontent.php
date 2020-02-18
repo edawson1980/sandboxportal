@@ -20,17 +20,19 @@ get_header();
              <?php while( have_posts() ) : the_post(); ?>
 
              <div class="col-md-12">
-                 <div class="card">
+                 <div class="dashtitle">
                      <h3>Feedback Form</h3>
-                     <?php acf_form(array(
-                         'fields' => array(
-                         'sc_revisions',
-                         'sc_client_comments',
-                         'sc_client_upload'
-                     ),
-                     'submit_value' => 'Submit feedback'
-                     )
-                    ); ?>
+                     <div class="card">
+                         <?php acf_form(array(
+                             'fields' => array(
+                             'sc_revisions',
+                             'sc_client_comments',
+                             'sc_client_upload'
+                         ),
+                         'submit_value' => 'Submit feedback'
+                         )
+                        ); ?>
+                     </div>
                  </div>
 
              </div>
