@@ -25,7 +25,8 @@ get_header();
                      <?php acf_form(array(
                          'fields' => array(
                          'sc_revisions',
-                         'sc_client_comments'
+                         'sc_client_comments',
+                         'sc_client_upload'
                      ),
                      'submit_value' => 'Submit feedback'
                      )
