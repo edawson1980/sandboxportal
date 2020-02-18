@@ -102,3 +102,16 @@ function make_cpt(){
 
 }
 add_action( 'init', 'make_cpt' );
+
+//style admin areas in back end to make a little easier to read.
+?>
+<?php
+function my_acf_admin_head(){
+?>
+  <style type="text/css">
+      .adminfields{background-color:#cce5e5;}
+  </style>
+<?php
+}
+add_action('acf/input/admin_head', 'my_acf_admin_head');
+  ?>
