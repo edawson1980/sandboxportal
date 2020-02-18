@@ -26,6 +26,9 @@ get_header();
                  <div class="disclaimer">
                      <p><span style="color:red;">Important:</span> Each proposal includes three rounds of edits per deliverable.  Brand Iron is happy to provide additional work after all rounds of edits have been used, at a rate of $275/hour.  With this in mind, we strongly suggest you double-check your feedback before clicking the 'Submit Feedback' button.</p>
                  </div>
+                 <div class="downloadarea">
+                     <p>Click <a href="<?php the_field('sc_download'); ?>" target="_blank">here</a> for the most recent version of your website content.</p>
+                 </div>
                      <div class="card">
                          <?php acf_form(array(
                              'fields' => array(
