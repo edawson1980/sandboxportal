@@ -28,6 +28,7 @@ get_header();
                  </div>
                  <div class="downloadarea">
                      <p>Click <a href="<?php the_field('sc_download'); ?>" target="_blank">here</a> for the most recent version of your website content.</p>
+                     <p><?php the_field('sc_doc_embed'); ?></p>
                  </div>
                      <div class="card acf-form">
                          <?php acf_form(array(
