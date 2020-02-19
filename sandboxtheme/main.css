@@ -18,6 +18,8 @@ h1{text-align:center;}
 
 .disclaimer p{font-style: italic;}
 
+.downloadarea iframe{width:100%;min-height:400px;}
+
 
 footer{
     position:relative;
