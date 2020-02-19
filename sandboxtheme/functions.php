@@ -124,6 +124,7 @@ add_action('acf/input/admin_head', 'my_acf_admin_head');
 <?php
 //set conditional requires on certain fields.  Mainly, only make required if user role is author (Client).  This allows employees to interact directly with dashboard.
 
+//specific to Client Approval
 function acf_conditional_user_role($valid, $value, $field, $input){
     //check that current user is only an author
     if(current_user_can('author')){
@@ -136,5 +137,17 @@ function acf_conditional_user_role($valid, $value, $field, $input){
 
 add_filter('acf/validate_value/key=field_5e4c5a0648025', 'acf_conditional_user_role', 10, 4);
 
+// specific to Revisions
+function acf_conditional_revisions($valid, $value, $field, $input){
+    //checks that current user role is Author
+    if(!current_user_can('edit_pages')){
+        if(!$value){
+            $valid = 'You must select Revisions round.';
+        }
+    }
+    return $valid;
+}
+
+add_filter('acf/validate_value/key=field_5e4b19bb2ff1c', 'acf_conditional_revisions', 10, 4);
 
 ?>
