@@ -103,9 +103,14 @@ function make_cpt(){
 }
 add_action( 'init', 'make_cpt' );
 
-//style admin areas in back end to make a little easier to read.
+
+
+
 ?>
+
+
 <?php
+//style admin areas in back end to make a little easier to read.
 function my_acf_admin_head(){
 ?>
   <style type="text/css">
@@ -115,3 +120,21 @@ function my_acf_admin_head(){
 }
 add_action('acf/input/admin_head', 'my_acf_admin_head');
   ?>
+
+<?php
+//set conditional requires on certain fields.  Mainly, only make required if user role is subscriber (Client).  This allows employees to interact directly with dashboard.
+
+function acf_conditional_user_role($valid, $value, $field, $input){
+    //check that current user is only a subscriber
+    if(current_user_can('subscriber')){
+        if(!$value){
+            $valid = 'You must accept Client Approval before submitting.';
+        }
+    }
+    return $valid;
+}
+
+add_filter('acf/validate_value/key=field_5e4c5a0648025', 'acf_conditional_user_role', 10, 4);
+
+
+?>
