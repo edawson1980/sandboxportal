@@ -122,11 +122,11 @@ add_action('acf/input/admin_head', 'my_acf_admin_head');
   ?>
 
 <?php
-//set conditional requires on certain fields.  Mainly, only make required if user role is subscriber (Client).  This allows employees to interact directly with dashboard.
+//set conditional requires on certain fields.  Mainly, only make required if user role is author (Client).  This allows employees to interact directly with dashboard.
 
 function acf_conditional_user_role($valid, $value, $field, $input){
-    //check that current user is only a subscriber
-    if(current_user_can('subscriber')){
+    //check that current user is only an author
+    if(current_user_can('author')){
         if(!$value){
             $valid = 'You must accept Client Approval before submitting.';
         }
