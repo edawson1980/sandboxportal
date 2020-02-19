@@ -150,4 +150,28 @@ function acf_conditional_revisions($valid, $value, $field, $input){
 
 add_filter('acf/validate_value/key=field_5e4b19bb2ff1c', 'acf_conditional_revisions', 10, 4);
 
+
+//add functionality to hide choice once it has been selected (thereby only allowing each choice once).
+// COMING SOON
+
+
+//make sure each Client can only see their own items in the Media Library
+function current_user_media($query){
+    //pull user id for current user
+    $user_id = get_current_user_id();
+
+    //conditional - if current user is unable to perform admin/editor role tasks, then current user can only see their own materials in media library.
+    if($user_id &&
+        //check for Admin:
+        !current_user_can('activate_plugins') &&
+        //check for Editor
+        !current_user_can('delete_others_pages')
+    ){
+        //only display the author's attachments.  author is denoted by $user_id
+        //**note: 'author' is this context DOES NOT refer to WP user roles
+        $query['author'] = $user_id;
+    }
+    return $query;
+}
+
 ?>
