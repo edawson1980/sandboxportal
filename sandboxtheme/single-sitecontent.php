@@ -32,9 +32,9 @@ get_header();
                      <div class="card">
                          <?php acf_form(array(
                              'fields' => array(
-                             'sc_revisions',
                              'sc_client_comments',
                              'sc_client_upload',
+                             'sc_revisions',
                              'sc_client_approval'
                          ),
                          'submit_value' => 'Submit feedback'
