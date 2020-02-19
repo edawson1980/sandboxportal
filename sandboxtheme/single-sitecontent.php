@@ -29,7 +29,7 @@ get_header();
                  <div class="downloadarea">
                      <p>Click <a href="<?php the_field('sc_download'); ?>" target="_blank">here</a> for the most recent version of your website content.</p>
                  </div>
-                     <div class="card">
+                     <div class="card acf-form">
                          <?php acf_form(array(
                              'fields' => array(
                              'sc_client_comments',
@@ -41,9 +41,7 @@ get_header();
                          )
                         ); ?>
                      </div>
-                    <?php $choice = get_field_object('sc_revisions'); ?>
 
-                    <p><?php echo $choice['label']?> : <?php echo $choice['value']?></p>
 
 
              </div>
