@@ -45,6 +45,26 @@ get_header();
                         ); ?>
                      </div>
 
+                     <?php
+                        //list the revisions values, push them to db
+                        $rounds = get_field('field_5e4b19bb2ff1c');
+                        if($rounds){
+                            update_post_meta(15, 'sc_revisions', $rounds);
+
+                            echo '<ul>';
+
+                            // foreach($rounds as $round){
+                            //
+                            //     add_post_meta(15, 'sc_revisions', $round, false);
+                            //
+                            //     echo '<li>' . $round . '</li>';
+                            // }
+                            echo '</ul>';
+                        }
+
+                        var_dump($rounds);
+                      ?>
+
 
 
              </div>
