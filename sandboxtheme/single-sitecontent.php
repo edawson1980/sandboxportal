@@ -48,19 +48,11 @@ get_header();
                      <?php
                         //list the revisions values, push them to db
                         $rounds = get_field('field_5e4b19bb2ff1c');
-                        if($rounds){
-                            update_post_meta(15, 'sc_revisions', $rounds);
+                        //step 1: query the database to find the entry for this field.
+                        $choice = $wpdb->get_var("SELECT meta_value FROM wp_postmeta WHERE meta_key = 'sc_revisions'");
 
-                            echo '<ul>';
-
-                            // foreach($rounds as $round){
-                            //
-                            //     add_post_meta(15, 'sc_revisions', $round, false);
-                            //
-                            //     echo '<li>' . $round . '</li>';
-                            // }
-                            echo '</ul>';
-                        }
+                        //step 2: print that information out (for tracking purposes).
+                        echo $choice;
 
                         var_dump($rounds);
                       ?>
