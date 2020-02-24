@@ -47,14 +47,26 @@ get_header();
 
                      <?php
                         //list the revisions values, push them to db
+                        //user input:
                         $rounds = get_field('field_5e4b19bb2ff1c');
+
                         //step 1: query the database to find the entry for this field.
                         $choice = $wpdb->get_var("SELECT meta_value FROM wp_postmeta WHERE meta_key = 'sc_revisions'");
 
-                        //step 2: print that information out (for tracking purposes).
-                        echo $choice;
 
-                        var_dump($rounds);
+                        //step 2: combine the queried value with the new user-generated value
+
+                        //convert $choice (which comes in as a serialized string) back into an array
+                        $choicearray = unserialize($choice);
+
+                        //combine the two arrays: p1 is the array pulled in from the db, p2 is the array selected by the user via the form.
+                        $updatedround = array_merge($choicearray, $rounds);
+
+                        //serialize to string (otherwise prints 'Array') as a visual checkpoint/training wheel.
+                        echo serialize($updatedround);
+
+
+
                       ?>
 
 
