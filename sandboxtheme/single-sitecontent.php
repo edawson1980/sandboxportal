@@ -65,6 +65,10 @@ get_header();
                         //serialize to string (otherwise prints 'Array') as a visual checkpoint/training wheel.
                         echo serialize($updatedround);
 
+                        //step 3: update the db
+                        //from L-R once inside the update helper function:
+                        //postmeta = the table, meta_value = the column (fat arrow indicates what to update that column's value with), meta_id = Location to perform updates (triangulate with column intersecting with which row.  in other words, find the appropriate cell).
+                        $wpdb->update($wpdb->postmeta, array('meta_value' => serialize($updatedround)), array('meta_id' => 20));
 
 
                       ?>
