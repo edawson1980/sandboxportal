@@ -53,22 +53,29 @@ get_header();
                         //step 1: query the database to find the entry for this field.
                         $choice = $wpdb->get_var("SELECT meta_value FROM wp_postmeta WHERE meta_key = 'sc_revisions'");
 
+                        //step 2: loop through the checkboxes to see if any have been checked.  if so, grab that data.
 
-                        //step 2: combine the queried value with the new user-generated value
+                        
+
+
+                        //step 3: combine the queried value with the new user-generated value
 
                         //convert $choice (which comes in as a serialized string) back into an array
                         $choicearray = unserialize($choice);
 
                         //combine the two arrays: p1 is the array pulled in from the db, p2 is the array selected by the user via the form.
-                        $updatedround = array_merge($choicearray, $rounds);
+                        // $updatedround = array_merge($choicearray, $rounds);
+                        $updatedround = array_merge($choicearray, $newvalue);
 
                         //serialize to string (otherwise prints 'Array') as a visual checkpoint/training wheel.
                         echo serialize($updatedround);
 
-                        //step 3: update the db
+                        //step 4: update the db
                         //from L-R once inside the update helper function:
                         //postmeta = the table, meta_value = the column (fat arrow indicates what to update that column's value with), meta_id = Location to perform updates (triangulate with column intersecting with which row.  in other words, find the appropriate cell).
                         $wpdb->update($wpdb->postmeta, array('meta_value' => serialize($updatedround)), array('meta_id' => 20));
+
+                        //step 5: reset the query to only ever have three elements, max:
 
 
                       ?>
