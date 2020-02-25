@@ -55,7 +55,7 @@ get_header();
 
                         //step 2: loop through the checkboxes to see if any have been checked.  if so, grab that data.
 
-                        
+
 
 
                         //step 3: combine the queried value with the new user-generated value
@@ -65,7 +65,7 @@ get_header();
 
                         //combine the two arrays: p1 is the array pulled in from the db, p2 is the array selected by the user via the form.
                         // $updatedround = array_merge($choicearray, $rounds);
-                        $updatedround = array_merge($choicearray, $newvalue);
+                        $updatedround = array_merge($choicearray, $rounds);
 
                         //serialize to string (otherwise prints 'Array') as a visual checkpoint/training wheel.
                         echo serialize($updatedround);
