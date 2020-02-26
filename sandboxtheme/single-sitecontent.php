@@ -19,7 +19,7 @@ get_header();
      <div class="container-fluid">
          <div class="row">
              <!-- start the Loop -->
-             <!-- <?php while( have_posts() ) : the_post(); ?> -->
+             <?php while( have_posts() ) : the_post(); ?>
 
              <div class="col-md-12">
                  <div class="dashtitle">
@@ -80,25 +80,18 @@ get_header();
                       ?>
 
              </div>
+             <!-- Back To Dashboard -->
 
+             <a href="/clients/<?php the_field('dash_slug') ?>">Back to Dashboard</a>
 
           <!-- end the Loop -->
-         <!-- <?php endwhile; ?> -->
+         <?php endwhile; ?>
 
 
 
 
          </div>
-         <!-- back to Dashboard -->
-         <div class="row">
-             <div class="backto">
-                 test test
-                 <p>testing</p>
 
-
-
-            </div>
-         </div>
      </div>
 
 
