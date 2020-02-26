@@ -38,22 +38,28 @@ get_header();
                              'sc_client_comments',
                              'sc_client_upload',
                              'sc_revisions',
+                             'sc_rev_two',
+                             'sc_rev_three',
                              'sc_client_approval'
                          ),
                          'submit_value' => 'Submit feedback'
                          )
                         ); ?>
+
                      </div>
 
                      <?php
                         //list the revisions values, push them to db
                         //user input:
-                        $rounds = get_field('field_5e4b19bb2ff1c');
+                        // $rounds = get_field('field_5e4b19bb2ff1c');
+
 
                         //step 1: query the database to find the entry for this field.
                         $choice = $wpdb->get_var("SELECT meta_value FROM wp_postmeta WHERE meta_key = 'sc_revisions'");
 
                         //step 2: loop through the checkboxes to see if any have been checked.  if so, grab that data.
+
+                        $rounds = get_field('field_5e4b19bb2ff1c');
 
 
 
@@ -68,7 +74,7 @@ get_header();
                         $updatedround = array_merge($choicearray, $rounds);
 
                         //serialize to string (otherwise prints 'Array') as a visual checkpoint/training wheel.
-                        echo serialize($updatedround);
+                        // echo serialize($updatedround);
 
                         //step 4: update the db
                         //from L-R once inside the update helper function:
