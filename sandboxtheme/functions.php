@@ -197,3 +197,4 @@ function custom_client_login(){
         echo $client->get_error_message($code='Incorrect Login. Please try again.' );
     }
 }
+add_action('after_setup_theme', 'custom_client_login');
