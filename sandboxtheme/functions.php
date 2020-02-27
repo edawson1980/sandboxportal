@@ -191,14 +191,13 @@ function custom_client_login(){
     $creds = array(
         'user_login' => $username,
         'user_password' => $password,
-        'remember' => $rememberme
     );
 
     $client = wp_signon($creds, false);
 
     //handle incorrect login info:
     if(is_wp_error($client)){
-        echo $client->get_error_message($code='Incorrect Login. Please try again.' );
+        echo $client->get_error_message();
     }
 }
 add_action('after_setup_theme', 'custom_client_login');
