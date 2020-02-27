@@ -177,3 +177,23 @@ function current_user_media($query){
 
 //restrict access to pages based on User ID
 // COMING SOON
+
+//handle Client login
+
+$username = $wpdb->get_var("SELECT user_login FROM wp_users");
+
+function custom_client_login(){
+    //these values are pulled from the database
+    $creds = array(
+        'user_login' => $username,
+        'user_password' => $password,
+        'remember' => $rememberme
+    );
+
+    $client = wp_signon($creds, false);
+
+    //handle incorrect login info:
+    if(is_wp_error($client)){
+        echo $client->get_error_message($code='Incorrect Login. Please try again.' );
+    }
+}
