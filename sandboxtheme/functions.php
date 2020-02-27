@@ -181,7 +181,7 @@ function current_user_media($query){
 //handle Client login
 
 $username = $wpdb->get_var("SELECT user_login FROM wp_users");
-
+$password = $wpdb->get_var("SELECT user_pass FROM wp_users");
 function custom_client_login(){
     //these values are pulled from the database
     $creds = array(
