@@ -196,8 +196,8 @@ function custom_client_login(){
     $client = wp_signon($creds, false);
 
     //handle incorrect login info:
-    if(is_wp_error($client)){
-        echo $client->get_error_message();
-    }
+    // if(is_wp_error($client)){
+    //     echo $client->get_error_message();
+    // }
 }
 add_action('after_setup_theme', 'custom_client_login');
