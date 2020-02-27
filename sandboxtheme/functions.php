@@ -175,6 +175,5 @@ function current_user_media($query){
     return $query;
 }
 
-
-
-?>
+//restrict access to pages based on User ID
+// COMING SOON
