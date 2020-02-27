@@ -9,6 +9,18 @@ Description: Login area for Clients
 get_header();
  ?>
 
+<!-- Login Form -->
+
+<div class="container-flex">
+    <form class="loginform" action="/user-login" method="post">
+        <input type="text" name="username" placeholder="Username" >
+        <br>
+        <input type="password" name="pwd" placeholder="Password">
+        <br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+</div>
 
 
 
