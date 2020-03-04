@@ -6,7 +6,7 @@ Description: Layout for individual Clients dashboard
 get_header();
  ?>
 
- <div class="container">
+ <div class="container-fluid">
      <div class="row">
          <div class="dashtitle">
              <h1>Welcome, <?php the_field('client_name') ?></h1>
