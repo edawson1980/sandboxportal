@@ -6,6 +6,12 @@ nav{justify-content: space-around;}
 
 h1{text-align:center;}
 
+
+.dashmods{
+    padding-top:20px;
+    margin-top:40px;
+    border-top:4px solid #1698af;
+}
 .card{
     text-align:center;
     padding:10px;
