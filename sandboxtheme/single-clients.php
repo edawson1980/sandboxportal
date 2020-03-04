@@ -13,9 +13,19 @@ get_header();
          </div>
      </div>
 
-     <div class="row">
+
          <!-- start the Loop -->
          <?php while( have_posts() ) : the_post(); ?>
+
+             <div class="row">
+                 <div class="col-md">
+                     <h3>Agency Point of Contact:</h3>
+                     <p><?php the_field('account_manager'); ?></p>
+
+                 </div>
+             </div>
+
+    <div class="row dashmods">
 
          <div class="col-sm">
              <div class="card">
